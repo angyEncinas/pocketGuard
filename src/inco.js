@@ -2,7 +2,7 @@
 const amou = document.querySelector("#amount");
 const desc = document.querySelector("#description");
 const form = document.querySelector("#income-form");
-const div = document.querySelector("#income-div");
+const divsuma = document.querySelector("#income-div");
 const divhistorial = document.querySelector("#historial-div2");
 let incomes = [];
 
@@ -12,10 +12,15 @@ form.addEventListener("submit", (event)=>{
    const description= desc.value;
    incomes.push([amount,description]);
     let txt = "";
+    let sumai = 0;
     incomes.forEach(myFunction);
     divhistorial.innerHTML = txt;
-
+    incomes.forEach(suma);
+    divsuma.innerHTML = "Total Incomes:" + sumai;
     function myFunction(value) {
         txt += value + "<br>"; 
     }
+    function suma(value) {
+      sumai += value[0]; 
+  }
 });

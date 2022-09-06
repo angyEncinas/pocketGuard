@@ -15,7 +15,7 @@ form.addEventListener("submit", (event)=>{
     expens.forEach(myFunction);
     divhistorial.innerHTML = txt;
     expens.forEach(suma);
-    divsuma.innerHTML = "Total expensas:" + sumae;
+    divsuma.innerHTML = "Total expenses:" + sumae;
     function myFunction(value) {
         txt += value + "<br>"; 
     }
