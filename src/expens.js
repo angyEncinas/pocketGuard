@@ -10,9 +10,6 @@ form.addEventListener("submit", (event)=>{
     const amount= Number.parseInt(exp.value);
     const description= desc.value;
     expens.push([amount,description]);
-    div.innerHTML = "<p>"+` Added Expense: ${expens[0]} `+ "<p/>"
-    const numbers = [45, 4, 9, 16, 25];
-
     let txt = "";
     expens.forEach(myFunction);
     divhistorial.innerHTML = txt;
